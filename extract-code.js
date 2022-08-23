@@ -41,7 +41,7 @@
   // 监听资源全部录取成功
   let _endOfStream = window.MediaSource.prototype.endOfStream
   window.MediaSource.prototype.endOfStream = function() {
-    alert('资源全部捕获成功，即将下载！')
+    toast('资源全部捕获成功，即将下载！')
     _download()
     _endOfStream.call(this)
   }

@@ -65,7 +65,7 @@
       var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?1f12b0865d866ae1b93514870d93ce89";
+        // hm.src = "https://hm.baidu.com/hm.js?1f12b0865d866ae1b93514870d93ce89";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
@@ -88,7 +88,7 @@
     let _endOfStream = window.MediaSource.prototype.endOfStream
     window.MediaSource.prototype.endOfStream = function() {
       if (!isClose) {
-        alert('资源全部捕获成功，即将下载！')
+        toast('资源全部捕获成功，即将下载！')
         _download()
         _endOfStream.call(this)
       }
